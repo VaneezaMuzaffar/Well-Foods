@@ -6,191 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WellFood</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #000;
-    }
-
-    .logo {
-      color: orange;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    nav ul li {
-      position: relative;
-      padding: 10px 15px;
-      cursor: pointer;
-    }
-
-    nav ul li:hover > ul {
-      display: block;
-    }
-
-    nav ul ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #222;
-      padding: 10px 0;
-      z-index: 1000;
-    }
-
-    nav ul ul li {
-      width: 200px;
-      padding: 10px;
-    }
-
-    nav ul ul ul {
-      left: 100%;
-      top: 0;
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .header-right i, .header-right button {
-      color: white;
-      cursor: pointer;
-    }
-
-    .book-btn {
-      background: red;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .book-btn:hover {
-      background: #e67e22;
-    }
-
-    .popup-form {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 300px;
-      height: 100vh;
-      background: #1a1a1a;
-      padding: 30px;
-      transition: right 0.3s ease;
-      z-index: 9999;
-    }
-
-    .popup-form.active {
-      right: 0;
-    }
-
-    .popup-form input, .popup-form textarea {
-      width: 100%;
-      margin: 10px 0;
-      padding: 10px;
-      border: none;
-      background: #333;
-      color: white;
-    }
-
-    .popup-form button {
-      background: orange;
-      border: none;
-      width: 100%;
-      padding: 10px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .popup-form .socials {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 20px;
-    }
-
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      padding: 60px 20px;
-      background-color: #111;
-    }
-    
-
-  
-    .hero-content {
-      flex: 1 1 400px;
-    }
-
-    .hero-content h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    .hero-content p {
-      max-width: 400px;
-      margin-bottom: 20px;
-    }
-
-    .hero-content .view-btn {
-      background: orange;
-      padding: 10px 20px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-    }
-
-    .hero-image {
-      flex: 1 1 400px;
-      text-align: center;
-      animation: float 4s infinite ease-in-out;
-    }
-
-    .hero-image img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-
-    @media (max-width: 768px) {
-      header, .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-      nav ul {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -202,61 +18,61 @@
  
     <nav>
       <ul>
-        <li>Home
-          <ul>
-            <li>Home Restaurant</li>
-            <li>Home Pizza</li>
-            <li>Home Burger</li>
-            <li>Home Chicken</li>
-            <li>Juice & Drinks</li>
-            <li>Home Grill</li>
+        <li class="under line">Home <img src="./assets/dropdown.png" alt="dropdown" class="drop">
+          <ul >
+            <li class="under line">Home Restaurant</li>
+            <li class="under line">Home Pizza</li>
+            <li class="under line">Home Burger</li>
+            <li class="under line">Home Chicken</li>
+            <li class="under line">Juice & Drinks</li>
+            <li class="under line">Home Grill</li>
           </ul>
         </li>
-        <li>Menu
+        <li class="under line">Menu <img src="./assets/dropdown.png" alt="dropdown" class="drop">
           <ul>
-            <li>Menu Restaurant</li>
-            <li>Menu Pizza</li>
-            <li>Menu Burger</li>
-            <li>Menu Chicken</li>
-            <li>Menu Sea Food</li>
-            <li>Menu Grill</li>
+            <li class="under line">Menu Restaurant</li>
+            <li class="under line">Menu Pizza</li>
+            <li class="under line">Menu Burger</li>
+            <li class="under line">Menu Chicken</li>
+            <li class="under line">Menu Sea Food</li>
+            <li class="under line">Menu Grill</li>
           </ul>
         </li>
-        <li>Pages
+        <li class="under line">Pages <img src="./assets/dropdown.png" alt="dropdown" class="drop">
           <ul>
-            <li>About Us</li>
-            <li>Our History</li>
-            <li>FAQs</li>
-            <li>Chefs
+            <li class="under line">About Us</li>
+            <li class="under line">Our History</li>
+            <li class="under line">FAQs</li>
+            <li class="under line">Chefs
               <ul>
-                <li>Our Chefs</li>
-                <li>Chefs Details</li>
+                <li class="under line">Our Chefs</li>
+                <li class="under line">Chefs Details</li>
               </ul>
             </li>
           </ul>
         </li>
-        <li>Blog
+        <li class="under line">Blog <img src="./assets/dropdown.png" alt="dropdown" class="drop">
           <ul>
-            <li>Blog Standard</li>
-            <li>Blog Details</li>
+            <li class="under line">Blog Standard</li>
+            <li class="under line">Blog Details</li>
           </ul>
         </li>
-        <li>Shop
+        <li class="under line">Shop <img src="./assets/dropdown.png" alt="dropdown" class="drop">
           <ul>
-            <li>Products</li>
-            <li>Products Details</li>
-            <li>Shopping Cart</li>
-            <li>Checkout Page</li>
+            <li class="under line">Products</li>
+            <li class="under line">Products Details</li>
+            <li class="under line">Shopping Cart</li>
+            <li class="under line">Checkout Page</li>
           </ul>
         </li>
-        <li>Contact</li>
+        <li class="under line">Contact</li>
       </ul>
     </nav>
     <div class="header-right">
-      <i class="fas fa-phone"></i> +880 123 456 88
+     <span class="contact"><i class="fas fa-phone"></i> +880 123 456 88</span> 
       <i class="fas fa-search"></i>
       <i class="fas fa-shopping-cart"></i>
-      <button class="book-btn" onclick="toggleForm()">Book Now</button>
+      <button class="book-btn" onclick="toggleForm()">Book Now<i class="fa-solid fa-arrow-right"></i></button>
       <i class="fas fa-bars" onclick="toggleForm()"></i>
     </div>
   </header>
@@ -278,16 +94,150 @@
 
   <section class="hero">
     <div class="hero-content">
-      <p><i class="fa-solid fa-burger"></i></i> Start price only $25</p>
+      <p class="price"><i class="fa-solid fa-burger"></i></i> Start price only $25</p>
       <h1>Delicious Food<br>Near Your Town</h1>
-      <p>Welcome to our culinary sanctuary, where every dish tells a story. Every bite is an adventure.</p>
-      <button class="view-btn">View All Menu</button>
+      <p class="text">Welcome to our culinary sanctuary, where every dish tells a story. Every bite is an adventure.</p>
+      <button class="view-btn">View All Menu <i class="fa-solid fa-arrow-right"></i></button>
     </div>
     <div class="hero-image">
       <img src="./assets/hero-right.png" alt="Food Image">
+      <img src="./assets/price-tag.png" alt="Price Tag" class="price-tag">
+      <img src="./assets/chillies.png" alt="Chilli" class="chilli">
+      <img src="./assets/tomato.png" alt="Tomato" class="tomato">
+    </div>
+  </section>
+  
+  <section class="menues">
+    <img src="./assets/chillies.png" alt="Chilli" class="menue-chilli">
+    <img src="./assets/tomato.png" alt="Tomato" class="menue-tomato">
+    <p class="sub-title">popular menu</p>
+    <h2>we provide exclusive food based on usa</h2>
+    <h2>explore our popular food</h2>
+    <div class="sub-menue">
+      <div class="first list">
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$25</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$10</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$22</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$43</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$77</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+      </div>
+      <div class="second list">
+          <div class="crab">
+          <h3>Red king Crab</h3><span>$25</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$10</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$22</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$43</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$77</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+      </div>
+      <div class="third list">
+           <div class="crab">
+          <h3>Red king Crab</h3><span>$25</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$10</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$22</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$43</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+        <div class="crab">
+          <h3>Red king Crab</h3><span>$77</span>
+          <p>Native to the icy waters of the Pacific</p>
+          <img src="./assets/crab-image.png" alt="Food Image" class="crab-image">
+        </div>
+      </div>
     </div>
   </section>
 
+  <section class="feedback">
+    <img src="./assets/chillies.png" alt="Chilli" class="menue-chilli">
+    <img src="./assets/tomato.png" alt="Tomato" class="menue-tomato">
+    <p class="sub-title">customer feedback</p>
+    <h2>what have lot’s off happy customer</h2>
+    <h2>explore feedback</h2>
+    <div class="thoughts">
+      <div class="opinion1 opps"><p>RENOWNED FOR ITS VERSATILITY IN THE KITCHEN, RED KING CRAB CAN BE PREPARED IN VARIOUS WAYS, FROM SIMPLE STEAMING OR BOILING TO ELABORATE PREPARATIONS SUCH AS GRILLILNG INCORPORATING</p>
+        <hr>
+        <div class="spoke-person">
+          <img src="./assets/author1.jpg" alt="AUTHOR1">
+          <div class="info">
+        <h3>STEVEN H.PAXON</h3>
+        <span>CEO & FOUNDER</span>
+          </div>
+        </div>
+      </div>
+      <div class="opinion2 opps"><p>RENOWNED FOR ITS VERSATILITY IN THE KITCHEN, RED KING CRAB CAN BE PREPARED IN VARIOUS WAYS, FROM SIMPLE STEAMING OR BOILING TO ELABORATE PREPARATIONS SUCH AS GRILLILNG INCORPORATING</p>
+        <hr>
+        <div class="spoke-person">
+          <img src="./assets/author2.jpg" alt="AUTHOR1">
+          <div class="info">
+        <h3>STEVEN H.PAXON</h3>
+        <span>CEO & FOUNDER</span>
+          </div>
+        </div>
+      </div>
+      <div class="opinion3 opps">
+        <p>RENOWNED FOR ITS VERSATILITY IN THE KITCHEN, RED KING CRAB CAN BE PREPARED IN VARIOUS WAYS, FROM SIMPLE STEAMING OR BOILING TO ELABORATE PREPARATIONS SUCH AS GRILLILNG INCORPORATING</p>
+        <hr>
+        <div class="spoke-person">
+          <img src="./assets/author3.jpg" alt="AUTHOR1">
+          <div class="info">
+        <h3>STEVEN H.PAXON</h3>
+        <span>CEO & FOUNDER</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <script>
     function toggleForm() {
       document.getElementById("popupForm").classList.toggle("active");

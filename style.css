@@ -1,0 +1,462 @@
+/* Import Font-family  Bebas Neue*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      font-family: "Bebas Neue",sans-serif;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #00000049;
+    }
+
+    .logo {
+      color: orange;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Navigation Bar */
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 40px 0px 0;
+    }
+
+    nav ul li {
+      position: relative;
+      padding: 10px 15px 10px 25px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 130%;
+      left: 0;
+      color: #000;
+      background: #fff;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    nav ul ul li {
+      width: 200px;
+      padding: 10px;
+      transition: all 0.5s ease;
+    }
+
+     nav ul ul li:hover{
+      transform: translateY(-10px);
+     }
+    nav ul ul ul {
+      left: 100%;
+      top: 0;
+    }
+
+    .drop{
+      height: 15px;
+      transition: all 0.3s ease;
+    }
+    nav ul li:hover .drop{
+      rotate: 180deg;
+    }
+    .under{
+      position: relative;
+    }
+    .line::before{
+      content: "";
+      position: absolute;
+      background-color: #ffb936;
+      left: 20%;
+      bottom: 10%;
+      width: 0%;
+      height: 2px;
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+     .line:hover::before{
+      width: 55%;
+      left: 30%;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .header-right i, .header-right button {
+      color: white;
+      cursor: pointer;
+    }
+
+    .book-btn {
+      width: 130px;
+      height: 50px;
+      background: #ec3d08;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all  0.3s ease;
+    }
+
+    .book-btn:hover {
+      background:#ffb936;
+      color: #000;
+    }
+
+    .book-btn:hover .fa-arrow-right{
+      color: #000;
+    }
+
+    /* Pop-up Menu */
+    .popup-form {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 300px;
+      height: 100vh;
+      background: #1a1a1a;
+      padding: 30px;
+      transition: right 0.3s ease;
+      z-index: 9999;
+    }
+
+    .popup-form.active {
+      right: 0;
+    }
+
+    .popup-form input, .popup-form textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      background: #333;
+      color: white;
+    }
+
+    .popup-form button {
+      background: orange;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .popup-form .socials {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 60px 20px;
+      background-image: url(./assets/hero-background.jpg);
+    }
+  
+    .hero-content {
+      flex: 1 1 400px;
+      margin: 5px 0 0 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 110px;
+      font-weight: 500;
+      line-height: 130px;
+      margin-bottom: 35px;
+    }
+    .price{
+        font-size:24px ;
+        color: #ffb936;
+        margin-bottom: 10px;
+    }
+
+    .hero-content .text{
+      max-width: 550px;
+      font-weight: 500;
+      font-size: 20px;
+      font-family: "Roboto Serif", serif;
+      margin-bottom: 40px;
+      padding: 0 0 5px 5px;
+      line-height: 35px;
+    }
+
+    .hero-content .view-btn {
+      background: #ec3d08;
+      color: #fff;
+      padding: 10px 20px;
+      height: 52px;
+      width: 154px;
+      text-align: center;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: all 0.5s ease;
+    }
+
+    .hero-content .view-btn:hover{
+      background-color: #ffb936;
+      color: #000;
+    }
+    .fa-arrow-right{
+      color: #fff;
+      padding: 2px 0 0 3px;
+      transition: all 0.5s ease;
+    }
+    .hero-content .view-btn:hover  .fa-arrow-right{
+      color: #000;
+
+    }
+    .hero-image {
+      flex: 1 1 400px;
+      text-align: center;
+      animation: float 4s infinite ease-in-out;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+    }
+    .price-tag{
+      position: absolute;
+      top: 50%;
+      left: 65%;
+    }
+    .chilli{
+      position: absolute;
+      top: 90%;
+      left: 20%;
+      rotate: 60deg;
+    }
+    .tomato{
+      position: absolute;
+      top: -10%;
+      left: 80%;
+    }
+
+    /* Menu Section */
+
+    .menues{
+      height: 170vh;
+      background-color: #fff;
+      position: relative;
+      text-align: center;
+      color: #000;
+      padding: 320px 0 4px 0;
+    }
+    .menue-chilli{
+      position: absolute;
+      top: 15%;
+      left: 5%;
+    }
+    .menue-tomato{
+      position: absolute;
+      top: 15%;
+      right: 5%;
+    }
+    .sub-title{
+      color: #ec3d08;
+      font-size: 20px;
+    }
+    .menues h2{
+      font-size: 55px;
+      font-weight: 400;
+      color: #0e1317;
+      line-height: 1.2;
+    }
+    .sub-menue{
+      height: 85vh;
+      display: flex;
+      padding: 10px 0 0 80px;
+    }
+    .list{
+      height: 80vh;
+      margin: 40px 10px 0 0;
+    }
+    .crab{
+      background-color: #f4f1ea;
+      border: 1px dashed rgba(23, 26, 33, 0.1);
+      padding: 35px 45px 8px;
+      text-align: left;
+      transition: all 0.5s ease;
+      position: relative;
+      z-index: 0;
+    }
+    .crab h3{
+      font-size: 24px;
+      font-weight: 400;
+      display: inline;
+    }
+    .crab span{
+      color: #ec3d08;
+      font-size: 27px;
+      padding:0 0 10px 150px;
+    }
+    .crab p{
+      padding: 10px 0 0 0;
+      font-size: 10px;
+      font-family:"Roboto Serif", serif;
+    }
+    .crab:hover{
+      background-image:url(./assets/crab-background.png) ;
+      background-color: #ec3d08;
+      transform:scale(1.03);
+    }
+    .crab-image{
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      visibility: hidden;
+      opacity: 0;
+    }
+    .crab:hover .crab-image{
+      visibility: visible;
+      opacity: 1;
+      z-index: 999;
+    }
+
+    /* Feedback Section */
+    .feedback{
+      height: 140vh;
+      background-color: #000;
+      position: relative;
+      text-align: center;
+      padding: 320px 0 4px 0;
+    }
+    .feedback h2{
+      font-size: 55px;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+    .thoughts{
+      height: 60vh;
+      display: flex;
+    }
+    .opps{
+      background-color:white;
+      color: #000;
+      height: 56vh;
+      margin: 10px 15px  0 30px;
+      padding: 40px 40px 35px 45px;
+    }
+    .opps p{
+      font-size: 24px;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+    .spoke-person{
+      align-items: center;
+      display: flex;
+      margin: 28px 0 0;
+      padding: 35px 0 0;
+    }
+    .info h3{
+      font-weight: 600;
+      font-size: 20px;
+      margin-top: 10px 0 3px 10px;
+      padding-left: 20px;
+    }
+    .info span{
+      font-family:"Roboto Serif", serif;
+      font-size: 10px;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+
+    @media (max-width: 980px) {
+      nav{
+        display: none;
+      }
+      .contact{
+        display: none;
+      }
+      .hero{
+        flex-direction: column;
+      }
+      .hero-content{
+        margin:0 0 40px 0 ;
+      }
+      .hero-content h1{
+        font-size: 80px;
+        line-height: 100px;
+      }
+      .menues{
+        height: 350vh;
+        padding-top: 250px;
+      }
+      .sub-menue{
+        display: block;
+      }
+      .menue-chilli{
+        top: 8%;
+      }
+      .menue-tomato{
+        top: 8%;
+      }
+      .menues h2{
+        font-size: 25px;
+      }
+      .crab{
+        margin: 0px 30px;
+        margin-right: 80px;
+        padding: 40px 10px 1px;
+      }
+      .crab h3{
+        font-size: 28px;
+      }
+      .crab span{
+        padding: 0  0 10px 200px;
+      }
+      .crab p{
+        font-size: 20px;
+      }
+  
+      .thoughts{
+        display: block;
+      }
+      .feedback h2{
+        font-size: 25px;
+      }
+    }
+    @media (max-width:440px){
+      .hero{
+        width: auto;
+      }
+      .hero-content h1{
+        font-size: 40px;
+        line-height: 60px;
+      }
+    }
