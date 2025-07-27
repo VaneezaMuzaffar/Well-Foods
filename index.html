@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WellFood</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #000;
+    }
+
+    .logo {
+      color: orange;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      position: relative;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #222;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    nav ul ul li {
+      width: 200px;
+      padding: 10px;
+    }
+
+    nav ul ul ul {
+      left: 100%;
+      top: 0;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .header-right i, .header-right button {
+      color: white;
+      cursor: pointer;
+    }
+
+    .book-btn {
+      background: red;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .book-btn:hover {
+      background: #e67e22;
+    }
+
+    .popup-form {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 300px;
+      height: 100vh;
+      background: #1a1a1a;
+      padding: 30px;
+      transition: right 0.3s ease;
+      z-index: 9999;
+    }
+
+    .popup-form.active {
+      right: 0;
+    }
+
+    .popup-form input, .popup-form textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      background: #333;
+      color: white;
+    }
+
+    .popup-form button {
+      background: orange;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .popup-form .socials {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 60px 20px;
+      background-color: #111;
+    }
+    
+
+  
+    .hero-content {
+      flex: 1 1 400px;
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content .view-btn {
+      background: orange;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hero-image {
+      flex: 1 1 400px;
+      text-align: center;
+      animation: float 4s infinite ease-in-out;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @media (max-width: 768px) {
+      header, .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+  <div class="logo">
+  <img src="./assets/logo (1).png" alt="WellFood Logo" style="height: 40px; vertical-align: middle;">
+  <span style="margin-left: 10px; color: orange; font-weight: bold;"></span>
+</div>
+ 
+    <nav>
+      <ul>
+        <li>Home
+          <ul>
+            <li>Home Restaurant</li>
+            <li>Home Pizza</li>
+            <li>Home Burger</li>
+            <li>Home Chicken</li>
+            <li>Juice & Drinks</li>
+            <li>Home Grill</li>
+          </ul>
+        </li>
+        <li>Menu
+          <ul>
+            <li>Menu Restaurant</li>
+            <li>Menu Pizza</li>
+            <li>Menu Burger</li>
+            <li>Menu Chicken</li>
+            <li>Menu Sea Food</li>
+            <li>Menu Grill</li>
+          </ul>
+        </li>
+        <li>Pages
+          <ul>
+            <li>About Us</li>
+            <li>Our History</li>
+            <li>FAQs</li>
+            <li>Chefs
+              <ul>
+                <li>Our Chefs</li>
+                <li>Chefs Details</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Blog
+          <ul>
+            <li>Blog Standard</li>
+            <li>Blog Details</li>
+          </ul>
+        </li>
+        <li>Shop
+          <ul>
+            <li>Products</li>
+            <li>Products Details</li>
+            <li>Shopping Cart</li>
+            <li>Checkout Page</li>
+          </ul>
+        </li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <i class="fas fa-phone"></i> +880 123 456 88
+      <i class="fas fa-search"></i>
+      <i class="fas fa-shopping-cart"></i>
+      <button class="book-btn" onclick="toggleForm()">Book Now</button>
+      <i class="fas fa-bars" onclick="toggleForm()"></i>
+    </div>
+  </header>
+
+  <div class="popup-form" id="popupForm">
+    <button onclick="toggleForm()" style="background: none; color: white; border: none; float: right; font-size: 18px">&times;</button>
+    <h3>Get Appointment</h3>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email Address">
+    <textarea placeholder="Message"></textarea>
+    <button>Submit Now</button>
+    <div class="socials">
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-pinterest"></i>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p><i class="fa-solid fa-burger"></i></i> Start price only $25</p>
+      <h1>Delicious Food<br>Near Your Town</h1>
+      <p>Welcome to our culinary sanctuary, where every dish tells a story. Every bite is an adventure.</p>
+      <button class="view-btn">View All Menu</button>
+    </div>
+    <div class="hero-image">
+      <img src="./assets/hero-right.png" alt="Food Image">
+    </div>
+  </section>
+
+  <script>
+    function toggleForm() {
+      document.getElementById("popupForm").classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>
